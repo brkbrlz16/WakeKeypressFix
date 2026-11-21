@@ -10,6 +10,13 @@ Pressing power button on your laptop will probably not turn on your display and 
 On laptops, opening the lid always triggers a wake-capable HID event. Therefore, when the lid is opened, the system can transition from DarkWake to Full Wake without any additional user input, and the display should turn on automatically.
 If your keyboard is connected over an internal USB port, you might be able to solve the issue once and for all using [USBWakeFixup](https://github.com/osy/USBWakeFixup).
 
+## **Installing**
+1- Unzip, then run "xattr -cr WakeUpScr.app" to clear the download quarantine. The app is unsigned.
+
+2- Double-click it and look for the "Wake Helper STARTED" dialog.
+
+3- If Tahoe shows a "Background Items Added" notice, allow it under System Settings → General → Login Items & Extensions.
+
 ## **Troubleshooting**
 If the display gets stuck at dark screen (or if the system hangs/crashes) after wake:
 
