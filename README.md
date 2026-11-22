@@ -10,6 +10,8 @@ Pressing power button on your laptop will probably not turn on your display and 
 On laptops, opening the lid always triggers a wake-capable HID event. Therefore, when the lid is opened, the system can transition from DarkWake to Full Wake without any additional user input, and the display should turn on automatically.
 If your keyboard is connected over an internal USB port, you might be able to solve the issue once and for all using [USBWakeFixup](https://github.com/osy/USBWakeFixup).
 
+This script watches for sleep/wake events. It doesn't trigger if Power Nap wakes the system up for routine tasks where system goes from Sleep to DarkWake. But, if the script detects a real wake event initiated by the user it runs "caffeinate -u" to declare a user input and wakes the display up.
+
 ## **Installing**
 1- Unzip, then run "xattr -cr WakeUpScr.app" to clear the download quarantine. The app is unsigned.
 
